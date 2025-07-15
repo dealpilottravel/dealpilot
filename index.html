@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DealPilot.Travel – Your vacation, our mission</title>
+  <title>DealPilot.travel – Your journey, our mission</title>
   <style>
     body {
       margin: 0;
@@ -16,11 +15,17 @@
       color: white;
       padding: 20px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav {
       background: #004080;
       padding: 10px;
       text-align: center;
+      position: sticky;
+      top: 60px;
+      z-index: 999;
     }
     nav a {
       color: white;
@@ -50,49 +55,104 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       margin-bottom: 20px;
     }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    form input, form textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 1em;
+    }
+    form button {
+      padding: 10px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
     footer {
       background: #1e90ff;
       color: white;
       text-align: center;
       padding: 15px;
     }
+    .social {
+      margin-top: 10px;
+    }
+    .social a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
   </style>
 </head>
-<body>
-
-<header>
-  <h1>DealPilot.Travel</h1>
-  <p>Your vacation, our mission</p>
-</header>
-
-<nav>
+<body><header>
+  <h1>DealPilot.travel</h1>
+  <p>Your journey, our mission</p>
+</header><nav>
   <a href="#offers">Offers</a>
   <a href="#about">About</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#blog">Blog</a>
   <a href="#contact">Contact</a>
-</nav>
-
-<section class="hero">
+</nav><section class="hero">
   Explore the world with us!
-</section>
-
-<section class="content">
+</section><section class="content">
   <div class="card" id="offers">
     <h2>🔥 Best Travel Deals</h2>
-    <p>Find amazing last-minute offers, exotic vacations, and city breaks at unbeatable prices.</p>
+    <p>Discover last-minute getaways, tropical resorts, and exclusive city escapes at unbeatable prices.</p>
+    <ul>
+      <li><strong>Barcelona City Break</strong> – 3 nights from €199</li>
+      <li><strong>Bali All-Inclusive</strong> – 7 nights from €799</li>
+      <li><strong>Weekend in Rome</strong> – 2 nights from €179</li>
+    </ul>
   </div>
   <div class="card" id="about">
     <h2>🌍 About Us</h2>
-    <p>We are travel enthusiasts. DealPilot.travel is a modern travel agency helping clients explore the world — cheaper and easier than ever before.</p>
+    <p>At DealPilot.travel, we are passionate travelers committed to making your dream vacations a reality. We provide personalized travel solutions for adventurers, families, and businesses alike.</p>
+  </div>
+  <div class="card" id="gallery">
+    <h2>🖼️ Travel Gallery</h2>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/400x300/?beach" alt="Beach">
+      <img src="https://source.unsplash.com/400x300/?mountains" alt="Mountains">
+      <img src="https://source.unsplash.com/400x300/?city,travel" alt="City">
+      <img src="https://source.unsplash.com/400x300/?adventure" alt="Adventure">
+    </div>
+  </div>
+  <div class="card" id="blog">
+    <h2>✏️ Travel Blog</h2>
+    <p><strong>Top 5 Underrated Travel Destinations for 2025</strong><br>Looking to avoid the crowds? Discover hidden gems across Europe and Asia that offer unforgettable experiences.</p>
+    <p><strong>How to Pack Like a Pro</strong><br>Our experts share essential packing tips to save space, stay organized, and travel stress-free.</p>
   </div>
   <div class="card" id="contact">
     <h2>📬 Contact Us</h2>
-    <p>Email: dealpilot.travel@gmail.com<br>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Email: contact@dealpilot.travel<br>
+       Phone: +48 123 456 789</p>
   </div>
-</section>
-
-<footer>
+</section><footer>
   &copy; 2025 DealPilot.travel – All rights reserved.
-</footer>
-
-</body>
+  <div class="social">
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://wa.me/48123456789" target="_blank">WhatsApp</a>
+  </div>
+</footer></body>
 </html>
