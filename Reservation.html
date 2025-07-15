@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation – DealPilot.travel</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f7f7f7; }
+    header, footer { background: #1e90ff; color: white; text-align: center; padding: 20px; }
+    nav { background: #004080; text-align: center; padding: 10px; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    .content { max-width: 800px; margin: 40px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    form { display: flex; flex-direction: column; }
+    form input, form select, form textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      padding: 10px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DealPilot.travel</h1>
+    <p>Your journey, our mission</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="reservation.html">Reservation</a>
+  </nav>
+  <div class="content">
+    <h2>📝 Book Your Trip</h2>
+    <form name="reservation" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="email" name="email" placeholder="Your Email Address" required />
+      <select name="destination" required>
+        <option value="">Select Destination</option>
+        <option value="Barcelona">Barcelona</option>
+        <option value="Bali">Bali</option>
+        <option value="Rome">Rome</option>
+        <option value="Other">Other</option>
+      </select>
+      <label>Departure Date</label>
+      <input type="date" name="departure_date" required />
+      <label>Return Date</label>
+      <input type="date" name="return_date" required />
+      <input type="number" name="travelers" placeholder="Number of Travelers" min="1" required />
+      <textarea name="message" placeholder="Special Requests / Notes" rows="4"></textarea>
+      <button type="submit">Submit Reservation</button>
+    </form>
+  </div>
+  <footer>
+    &copy; 2025 DealPilot.travel – All rights reserved.
+  </footer>
+</body>
+</html>
